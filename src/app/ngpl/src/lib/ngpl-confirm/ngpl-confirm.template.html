@@ -1,0 +1,30 @@
+<section class="confirm-content" [class.no-icon]="!data.showIcon">
+  <div class="confirm-icon-container {{data.iconType || ''}}" *ngIf="!!data.showIcon">
+    <img [src]="'assets/svg/papelera/'+(data.iconType || 'normal')+'.svg'" class="{{data.iconType || 'normal'}}">
+  </div>
+  <div class="confirm-container">
+    <div class="confirm-text-container">
+      <p class="confirm-textTitle">{{data.title}}</p>
+      <p class="confirm-textMessage" [innerHTML]="data.message"> </p>
+    </div>
+    <div class="confirm-action-text-container" *ngIf="!!data.actionText">
+      <mat-form-field controlErrorContainer appearance="outline" class="no-empty">
+        <mat-label>Accion</mat-label>
+        <input cdkFocusInitial matInput type="text" [formControl]="actionTextCtrl">
+      </mat-form-field>
+    </div>
+    <div class="confirm-actions">
+      <button (click)="dialogRef.close(false)" *ngIf="data.showCancel" class="confirm-btn confirm-btn-next mr-3 "
+              mat-raised-button
+              type="button">
+        Cancelar
+      </button>
+      <button (click)="dialogRef.close(true)" cdkFocusInitial class="confirm-btn confirm-btn-red"
+              [disabled]="!!data.actionText && actionTextCtrl.value !== data.actionText"
+              mat-raised-button
+              type="button">
+        Aceptar
+      </button>
+    </div>
+  </div>
+</section>

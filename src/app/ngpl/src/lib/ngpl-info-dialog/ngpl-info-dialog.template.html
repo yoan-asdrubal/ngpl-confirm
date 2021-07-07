@@ -1,0 +1,18 @@
+<section class="confirm-content" [class.no-icon]="!data.showIcon">
+  <div class="confirm-icon-container" *ngIf="!!data.showIcon">
+    <img src="assets/svg/papelera.svg">
+  </div>
+  <div class="confirm-container">
+    <div class="confirm-text-container">
+      <p class="confirm-textTitle">{{data.title}}</p>
+      <p class="confirm-textMessage">{{data.message}}</p>
+    </div>
+    <div class="confirm-actions">
+      <button (click)="dialogRef.close(true)" cdkFocusInitial class="confirm-btn confirm-btn-red"
+              mat-raised-button
+              type="button">
+        Aceptar
+      </button>
+    </div>
+  </div>
+</section>

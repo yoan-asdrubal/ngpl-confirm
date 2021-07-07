@@ -1,0 +1,8 @@
+{
+  "name": "ngpl-dialog",
+  "version": "2.0.26",
+  "peerDependencies": {},
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
