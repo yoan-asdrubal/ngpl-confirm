@@ -57,9 +57,10 @@ body {
 
 .text-center {
   text-align: center !important;
-    div.mat-sort-header-container {
-      justify-content: center;
-    }
+
+  div.mat-sort-header-container {
+    justify-content: center;
+  }
 }
 
 .text-left {
@@ -145,7 +146,6 @@ span.mat-option-text {
 }
 
 
-
 //default scrollbar
 ::-webkit-scrollbar {
   width: 8px;
@@ -214,12 +214,19 @@ p, h1, h2, h3, span, input, label, mat-checkbox,
 
 .full-width {
   width: 100% !important;
-  flex: 1 1 ;
+  flex: 1 1;
 }
 
 .pointer {
   cursor: pointer;
 }
+
 .mat-dialog-container {
   padding: 0px !important;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
 }

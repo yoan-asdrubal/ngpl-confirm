@@ -91,4 +91,27 @@ export class NgplConfirmTestComponent implements OnInit {
     )
       .subscribe();
   }
+
+  lottieDefault(): void {
+    this.ngplDialogService.lottie();
+  }
+
+  lottieCheckOrange(): void {
+    this.ngplDialogService.lottie({
+      lottiePath: '/assets/lottie/check-orange-1.json'
+    });
+  }
+
+  lottieCheckSuccess(): void {
+    this.ngplDialogService.lottie({
+      lottiePath: '/assets/lottie/check-success.json'
+    });
+  }
+
+
+  lottie(lottie): void {
+    this.ngplDialogService.lottie({
+      lottiePath: `/assets/lottie/${lottie}.json`
+    });
+  }
 }

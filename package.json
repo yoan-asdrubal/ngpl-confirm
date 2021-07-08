@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4200",
-    "build": "ng build",
     "build": "ng build --prod --base-href /ngpl-dialog/",
     "test": "ng test",
     "lint": "ng lint",
@@ -32,7 +31,9 @@
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
     "@ngneat/until-destroy": "^8.0.3",
+    "lottie-web": "^5.7.11",
     "moment": "^2.29.1",
+    "ngx-lottie": "^7.0.3",
     "ngx-reactivetoolkit": "^8.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
