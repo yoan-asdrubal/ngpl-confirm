@@ -1,32 +1,33 @@
-<section>
-
-
-  <div fxLayout="column" fxLayoutAlign="center center">
-    <span class="title">Ngpl Confirm Dialog</span>
-    <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
-      <button mat-button (click)="eliminarSinAccion()">Confirmación sin Acción</button>
-      <button mat-button (click)="eliminarConAccion()"> Confirmación Con Acción</button>
-      <button mat-button (click)="confirmNormalIcon()"> Confirmación Normal Icon</button>
-      <button mat-button (click)="confirmSmallIcon()"> Confirmación Small Icon</button>
-      <button mat-button (click)="confirmConTextoResaltado()"> Confirmación Highlight text</button>
-    </div>
-    <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
-      <button mat-button (click)="lottieDefault()"> Lottie Default</button>
-      <button mat-button (click)="lottieCheckOrange()"> Lottie Check Orange</button>
-      <button mat-button (click)="lottieCheckSuccess()"> Lottie Check Orange</button>
-    </div>
-    <h3>Delete</h3>
-    <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
-      <button mat-button (click)="lottie('trash1')"> Eliminar 1</button>
-      <button mat-button (click)="lottie('trash2')"> Eliminar 2</button>
-    </div>
-    <h3>Warning</h3>
-    <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
-      <button mat-button (click)="lottie('warn-orange-1')"> Warning 1</button>
-      <button mat-button (click)="lottie('warn-orange-2')"> Warning 2</button>
-    </div>
-
+<div fxLayout="column" fxLayoutAlign="center center">
+  <span class="title">Ngpl Confirm Dialog</span>
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
+    <button mat-raised-button (click)="eliminarSinAccion()">Confirmación sin Acción</button>
+    <button mat-raised-button (click)="eliminarConAccion()"> Confirmación Con Acción</button>
+    <button mat-raised-button (click)="confirmNormalIcon()"> Confirmación Normal Icon</button>
+    <button mat-raised-button (click)="confirmSmallIcon()"> Confirmación Small Icon</button>
+    <button mat-raised-button (click)="confirmConTextoResaltado()"> Confirmación Highlight text</button>
   </div>
 
+  <span class="title">Ngpl Lottie Confirm Dialog</span>
 
-</section>
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
+    <button mat-raised-button (click)="eliminarSinAccionLottie()">Lottie sin Acción</button>
+    <button mat-raised-button (click)="eliminarConAccionLottie()"> Lottie Con Acción</button>
+    <button mat-raised-button (click)="confirmConTextoResaltadoLottie()"> Lottie Highlight text</button>
+  </div>
+  <span class="title">Ngpl Lottie Check Dialog</span>
+
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
+    <button mat-raised-button (click)="successLottie()"> Green Check</button>
+    <button mat-raised-button (click)="lottieCheck('check-orange')"> Orange Check</button>
+    <button mat-raised-button (click)="lottieCheck('green-check')"> Green Check</button>
+  </div>
+  <span class="title">Ngpl Lottie Warn Dialog</span>
+
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="mt-3">
+    <button mat-raised-button (click)="lottieWarn('warn-orange-1')">Warn Orange 1</button>
+    <button mat-raised-button (click)="lottieWarn('warn-orange-2')"> Warn Orange 2</button>
+  </div>
+
+</div>
+

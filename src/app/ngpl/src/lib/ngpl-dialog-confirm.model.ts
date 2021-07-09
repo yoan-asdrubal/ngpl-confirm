@@ -6,7 +6,7 @@ export interface NgplDialogConfirmModel {
   actionText?: string;
   iconType?: 'small' | 'normal' | null;
   lottiePath?: string;
-  type: 'success' | 'error' | 'warn' | null;
+  type?: 'success' | 'error' | 'warn' | 'confirm' |  null;
 }
 
 export enum NgplDialogConfirmEnum {

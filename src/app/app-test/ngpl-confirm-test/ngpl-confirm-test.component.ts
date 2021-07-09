@@ -96,22 +96,88 @@ export class NgplConfirmTestComponent implements OnInit {
     this.ngplDialogService.lottie();
   }
 
-  lottieCheckOrange(): void {
-    this.ngplDialogService.lottie({
-      lottiePath: '/assets/lottie/check-orange-1.json'
-    });
+  eliminarSinAccionLottie(): void {
+    this.ngplDialogService.lottieConfirm({
+      title: 'Confirmación',
+      message: 'Mensaje de Confirmación Sin Acción',
+      lottiePath: '/assets/lottie/trash2.json'
+    }).pipe(
+      take(1),
+      filter(value => !!value),
+      tap(() => this.ngplDialogService.lottieSuccess({
+        title: 'Confirmado correctamente',
+        lottiePath: '/assets/lottie/check-success.json',
+        type: 'success'
+      }))
+    )
+      .subscribe();
   }
 
-  lottieCheckSuccess(): void {
-    this.ngplDialogService.lottie({
-      lottiePath: '/assets/lottie/check-success.json'
-    });
+  eliminarConAccionLottie(): void {
+    this.ngplDialogService.lottieConfirm({
+      title: 'Confirmación',
+      message: `Escriba  ELIminar para confirmar la acción`,
+      actionText: 'ELIminar',
+      lottiePath: '/assets/lottie/trash2.json'
+    }).pipe(
+      take(1),
+      filter(value => !!value),
+      tap(() => this.ngplDialogService.lottieSuccess({
+        title: 'Confirmado correctamente',
+        lottiePath: '/assets/lottie/check-success.json',
+        type: 'success'
+      }))
+    )
+      .subscribe();
+  }
+
+  confirmConTextoResaltadoLottie(): void {
+    this.ngplDialogService.lottieConfirm({
+      title: 'Confirmación',
+      message: `Escriba <b><i>ELIminar</i></b> para confirmar la acción`,
+      actionText: 'ELIminar',
+      iconType: 'small',
+      lottiePath: '/assets/lottie/trash2.json'
+
+    }).pipe(
+      take(1),
+      filter(value => !!value),
+      tap(() => this.ngplDialogService.lottieSuccess({
+        title: 'Eliminado con Hightligth correctamente',
+        lottiePath: '/assets/lottie/check-success.json',
+        type: 'success'
+      }))
+    )
+      .subscribe();
   }
 
 
   lottie(lottie): void {
     this.ngplDialogService.lottie({
       lottiePath: `/assets/lottie/${lottie}.json`
+    });
+  }
+
+  successLottie(): void {
+    this.ngplDialogService.lottieSuccess({
+      title: 'Dialog Success Mostrado correctamente',
+      lottiePath: '/assets/lottie/check-success.json',
+      type: 'success'
+    });
+  }
+
+  lottieCheck(lottie): void {
+    this.ngplDialogService.lottieSuccess({
+      title: 'Dialog Success Mostrado correctamente',
+      lottiePath: `/assets/lottie/${lottie}.json`,
+      type: 'success'
+    });
+  }
+  lottieWarn(lottie): void {
+    this.ngplDialogService.lottieSuccess({
+      title: 'Dialog Warning Mostrado correctamente',
+      lottiePath: `/assets/lottie/${lottie}.json`,
+      type: 'success'
     });
   }
 }

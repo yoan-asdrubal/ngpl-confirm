@@ -78,11 +78,42 @@ export class NgplDialogService {
     });
     return dialogRef.afterClosed();
   }
+
   public lottie(data: NgplDialogConfirmModel = {}): Observable<boolean> {
     data.title = data.title || 'Información';
-    data.message = data.message || 'Operación Realizada Satisfactoriamente';
     data.showCancel = data.showCancel || false;
-    data.showIcon = data.showIcon || false;
+    data.showIcon = false;
+
+    let dialogRef: MatDialogRef<NgplLottieComponent>;
+    dialogRef = this.dialog.open(NgplLottieComponent, {
+      width: '480px',
+      disableClose: false,
+      data,
+      backdropClass: 'confirm-backdrop-class',
+      panelClass: 'confirm-panel-class'
+    });
+    return dialogRef.afterClosed();
+  }
+
+  public lottieSuccess(data: NgplDialogConfirmModel = {}): Observable<boolean> {
+    data.type = data.type || 'success';
+
+    let dialogRef: MatDialogRef<NgplLottieComponent>;
+    dialogRef = this.dialog.open(NgplLottieComponent, {
+      width: '480px',
+      disableClose: false,
+      data,
+      backdropClass: 'confirm-backdrop-class',
+      panelClass: 'confirm-panel-class'
+    });
+    return dialogRef.afterClosed();
+  }
+
+  public lottieConfirm(data: NgplDialogConfirmModel = {}): Observable<boolean> {
+    data.title = data.title || 'Confirmación';
+    data.showCancel = data.showCancel || true;
+    data.showIcon = false;
+    data.type = data.type || 'confirm';
 
     let dialogRef: MatDialogRef<NgplLottieComponent>;
     dialogRef = this.dialog.open(NgplLottieComponent, {
