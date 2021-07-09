@@ -34,7 +34,7 @@ export class NgplLottieTestComponent implements OnInit {
 
   lottieDefault(lottie): void {
     this.ngplDialogService.lottie({
-      lottiePath: `/assets/lottie/${lottie}.json`
+      lottiePath: `./assets/lottie/${lottie}.json`
     });
   }
 
