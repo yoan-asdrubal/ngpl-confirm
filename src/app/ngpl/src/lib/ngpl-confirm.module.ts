@@ -7,8 +7,9 @@ import {MatInputModule} from '@angular/material/input';
 import {NgplInfoDialogComponent} from './ngpl-info-dialog/ngpl-info-dialog.component';
 import {LottieCacheModule, LottieModule} from 'ngx-lottie';
 import player from 'lottie-web';
-import { NgplLottieComponent } from './ngpl-lottie/ngpl-lottie.component';
-export function playerFactory() {
+import {NgplLottieComponent} from './ngpl-lottie/ngpl-lottie.component';
+
+export function playerFactory(): any {
   return player;
 }
 
@@ -20,7 +21,7 @@ export function playerFactory() {
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    LottieModule.forRoot({ player: playerFactory }),
+    LottieModule.forRoot({player: playerFactory}),
     LottieCacheModule.forRoot()
   ]
 })
