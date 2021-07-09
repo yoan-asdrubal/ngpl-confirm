@@ -27,6 +27,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgplConfirmModule} from './ngpl/src/lib/ngpl-confirm.module';
 import {NgplConfirmTestComponent} from './app-test/ngpl-confirm-test/ngpl-confirm-test.component';
+import {NgplLottieTestComponent} from './app-test/ngpl-lottie-test/ngpl-lottie-test.component';
 
 registerLocaleData(localeEs);
 
@@ -59,7 +60,8 @@ const ngplCommonModules = [
   declarations: [
     AppComponent,
     NgplConfirmTestComponent,
-    SideNavComponent
+    SideNavComponent,
+    NgplLottieTestComponent
   ],
   imports: [
     BrowserModule,

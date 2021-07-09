@@ -92,8 +92,10 @@ export class NgplConfirmTestComponent implements OnInit {
       .subscribe();
   }
 
-  lottieDefault(): void {
-    this.ngplDialogService.lottie();
+  lottieDefault(lottie): void {
+    this.ngplDialogService.lottie({
+      lottiePath: `/assets/lottie/${lottie}.json`
+    });
   }
 
   eliminarSinAccionLottie(): void {
@@ -106,7 +108,6 @@ export class NgplConfirmTestComponent implements OnInit {
       filter(value => !!value),
       tap(() => this.ngplDialogService.lottieSuccess({
         title: 'Confirmado correctamente',
-        lottiePath: '/assets/lottie/check-success.json',
         type: 'success'
       }))
     )
@@ -124,7 +125,6 @@ export class NgplConfirmTestComponent implements OnInit {
       filter(value => !!value),
       tap(() => this.ngplDialogService.lottieSuccess({
         title: 'Confirmado correctamente',
-        lottiePath: '/assets/lottie/check-success.json',
         type: 'success'
       }))
     )
@@ -144,26 +144,10 @@ export class NgplConfirmTestComponent implements OnInit {
       filter(value => !!value),
       tap(() => this.ngplDialogService.lottieSuccess({
         title: 'Eliminado con Hightligth correctamente',
-        lottiePath: '/assets/lottie/check-success.json',
         type: 'success'
       }))
     )
       .subscribe();
-  }
-
-
-  lottie(lottie): void {
-    this.ngplDialogService.lottie({
-      lottiePath: `/assets/lottie/${lottie}.json`
-    });
-  }
-
-  successLottie(): void {
-    this.ngplDialogService.lottieSuccess({
-      title: 'Dialog Success Mostrado correctamente',
-      lottiePath: '/assets/lottie/check-success.json',
-      type: 'success'
-    });
   }
 
   lottieCheck(lottie): void {
@@ -173,8 +157,9 @@ export class NgplConfirmTestComponent implements OnInit {
       type: 'success'
     });
   }
+
   lottieWarn(lottie): void {
-    this.ngplDialogService.lottieSuccess({
+    this.ngplDialogService.lottieWarn({
       title: 'Dialog Warning Mostrado correctamente',
       lottiePath: `/assets/lottie/${lottie}.json`,
       type: 'success'
