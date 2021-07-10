@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {NgplConfirmTestComponent} from './app-test/ngpl-confirm-test/ngpl-confirm-test.component';
 import {NgplLottieTestComponent} from './app-test/ngpl-lottie-test/ngpl-lottie-test.component';
+import {NgplAlertTestComponent} from './app-test/ngpl-alert-test/ngpl-alert-test.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,9 @@ const routes: Routes = [
   }, {
     path: 'ngpl-lottie',
     component: NgplLottieTestComponent
+  }, {
+    path: 'ngpl-alert',
+    component: NgplAlertTestComponent
   }, {
     path: '**',
     component: NgplConfirmTestComponent

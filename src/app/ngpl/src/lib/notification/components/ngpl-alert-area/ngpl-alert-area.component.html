@@ -1,0 +1,6 @@
+<ul class="alerts">
+  <ng-template ngFor let-alert [ngForOf]="alerts | async">
+    <li><ngpl-alert [alert]="alert" (close)="doClose(alert)"></ngpl-alert></li>
+  </ng-template>
+</ul>
+

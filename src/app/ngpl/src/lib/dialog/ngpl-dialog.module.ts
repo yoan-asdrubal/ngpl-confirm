@@ -25,6 +25,6 @@ export function playerFactory(): any {
     LottieCacheModule.forRoot()
   ]
 })
-export class NgplConfirmModule {
+export class NgplDialogModule {
 
 }

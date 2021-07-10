@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgplDialogService} from '../../ngpl/src/lib/ngpl-dialog.service';
+import {NgplDialogService} from '../../ngpl/src/lib/dialog/ngpl-dialog.service';
 
 @Component({
   selector: 'ngpl-lottie-test',

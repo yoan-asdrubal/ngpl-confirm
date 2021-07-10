@@ -25,9 +25,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgplConfirmModule} from './ngpl/src/lib/ngpl-confirm.module';
+import {NgplDialogModule} from './ngpl/src/lib/dialog/ngpl-dialog.module';
 import {NgplConfirmTestComponent} from './app-test/ngpl-confirm-test/ngpl-confirm-test.component';
 import {NgplLottieTestComponent} from './app-test/ngpl-lottie-test/ngpl-lottie-test.component';
+import {NgplAlertTestComponent} from './app-test/ngpl-alert-test/ngpl-alert-test.component';
+import {NgplNotificationsModule} from './ngpl/src/lib/notification';
 
 registerLocaleData(localeEs);
 
@@ -52,7 +54,8 @@ const materialModules = [
 ];
 
 const ngplCommonModules = [
-  NgplConfirmModule
+  NgplDialogModule,
+  NgplNotificationsModule
 ];
 
 
@@ -61,7 +64,8 @@ const ngplCommonModules = [
     AppComponent,
     NgplConfirmTestComponent,
     SideNavComponent,
-    NgplLottieTestComponent
+    NgplLottieTestComponent,
+    NgplAlertTestComponent
   ],
   imports: [
     BrowserModule,

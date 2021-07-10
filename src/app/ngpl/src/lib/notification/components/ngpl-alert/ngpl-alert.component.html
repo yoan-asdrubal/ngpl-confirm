@@ -1,0 +1,22 @@
+<div [@alert] class="alert alert-{{alertClass}}">
+
+  <img class="alert-icon" *ngIf="alertClass==='success' && !alert.lottiePath"
+       src="assets/alert/success/success.png" alt="Success"/>
+  <img class="alert-icon" *ngIf="alertClass==='danger' && !alert.lottiePath" src="assets/alert/error/error.png"
+       alt="Error"/>
+  <ng-lottie class="alert-icon" *ngIf="!!alert.lottiePath"
+             height="50px" width="50px"
+             [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+  <label>{{alert.title}}</label>
+
+  <div *ngIf="alert.message" class="message" [innerHtml]="alert.message"></div>
+  <img class="close-icon"
+       (click)="close.emit(true)" *ngIf="alertClass==='success'"
+       src="assets/alert/close_success/close_success.png" alt="Close"/>
+
+  <img class="close-icon"
+       (click)="close.emit(true)" *ngIf="alertClass==='danger'"
+       src="assets/alert/close_error/close_error.png"
+       alt="Close"/>
+
+</div>
