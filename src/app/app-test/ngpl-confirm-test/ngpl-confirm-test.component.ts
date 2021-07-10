@@ -94,7 +94,7 @@ export class NgplConfirmTestComponent implements OnInit {
 
   lottieDefault(lottie): void {
     this.ngplDialogService.lottie({
-      lottiePath: `/assets/lottie/${lottie}.json`
+      lottiePath: `./assets/lottie/${lottie}.json`
     });
   }
 
@@ -102,7 +102,7 @@ export class NgplConfirmTestComponent implements OnInit {
     this.ngplDialogService.lottieConfirm({
       title: 'Confirmación',
       message: 'Mensaje de Confirmación Sin Acción',
-      lottiePath: '/assets/lottie/trash2.json'
+      lottiePath: './assets/lottie/trash2.json'
     }).pipe(
       take(1),
       filter(value => !!value),
@@ -119,7 +119,7 @@ export class NgplConfirmTestComponent implements OnInit {
       title: 'Confirmación',
       message: `Escriba  ELIminar para confirmar la acción`,
       actionText: 'ELIminar',
-      lottiePath: '/assets/lottie/trash2.json'
+      lottiePath: './assets/lottie/trash2.json'
     }).pipe(
       take(1),
       filter(value => !!value),
@@ -137,7 +137,7 @@ export class NgplConfirmTestComponent implements OnInit {
       message: `Escriba <b><i>ELIminar</i></b> para confirmar la acción`,
       actionText: 'ELIminar',
       iconType: 'small',
-      lottiePath: '/assets/lottie/trash2.json'
+      lottiePath: './assets/lottie/trash2.json'
 
     }).pipe(
       take(1),
@@ -153,7 +153,7 @@ export class NgplConfirmTestComponent implements OnInit {
   lottieCheck(lottie): void {
     this.ngplDialogService.lottieSuccess({
       title: 'Dialog Success Mostrado correctamente',
-      lottiePath: `/assets/lottie/${lottie}.json`,
+      lottiePath: `./assets/lottie/${lottie}.json`,
       type: 'success'
     });
   }
@@ -161,7 +161,7 @@ export class NgplConfirmTestComponent implements OnInit {
   lottieWarn(lottie): void {
     this.ngplDialogService.lottieWarn({
       title: 'Dialog Warning Mostrado correctamente',
-      lottiePath: `/assets/lottie/${lottie}.json`,
+      lottiePath: `./assets/lottie/${lottie}.json`,
       type: 'success'
     });
   }
