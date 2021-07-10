@@ -20,7 +20,6 @@ export class NgplLottieTestComponent implements OnInit {
     'warn-orange-2',
     'sand-clock-orange',
     'no-data-orange',
-    '404-error-page',
     'search-blue',
     'procesando-orange-1',
   ];

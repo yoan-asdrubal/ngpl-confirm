@@ -9,7 +9,7 @@ import {LottieCacheModule, LottieModule} from 'ngx-lottie';
 import player from 'lottie-web';
 import {NgplLottieComponent} from './ngpl-lottie/ngpl-lottie.component';
 
-export function playerFactory(): any {
+export function playerFactoryDialog(): any {
   return player;
 }
 
@@ -21,7 +21,7 @@ export function playerFactory(): any {
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    LottieModule.forRoot({player: playerFactory}),
+    LottieModule.forRoot({player: playerFactoryDialog}),
     LottieCacheModule.forRoot()
   ]
 })
