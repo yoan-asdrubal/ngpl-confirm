@@ -63,6 +63,6 @@ export class NgplNotificationsService {
   private _createExpirationCall(alert: Alert): void {
     setTimeout(() => {
       this.doClose(alert);
-    }, 50000);
+    }, 5000);
   }
 }
