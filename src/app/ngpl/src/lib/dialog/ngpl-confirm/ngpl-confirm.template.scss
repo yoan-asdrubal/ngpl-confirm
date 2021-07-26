@@ -68,10 +68,8 @@
     margin-bottom: 24px;
 
     .confirm-btn {
-      //font-family: $main-font-family !important;
       min-width: 110px !important;
       height: 40px !important;
-      //margin-left: 16px !important;
       font-size: 16px !important;
       line-height: 1 !important;
       letter-spacing: 0.2px !important;
@@ -91,9 +89,6 @@
         cursor: default !important;
       }
 
-      p, .mat-button-wrapper {
-        //font-family: $main-font-family !important;
-      }
     }
 
 
@@ -114,8 +109,3 @@
   }
 }
 
-.confirm-panel-class {
-  .mat-dialog-container {
-    padding: 0 !important;
-  }
-}

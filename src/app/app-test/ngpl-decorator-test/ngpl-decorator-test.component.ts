@@ -34,8 +34,9 @@ export class NgplDecoratorTestComponent implements OnInit {
   }
 
   @Confirmable({type: 'success', message: 'Custom Confirmation '})
-  confirm(action): void {
-    alert(action);
+  confirm(action = 'action 1', t = 't 1'): void {
+    console.log('log confirm', action, t, typeof action, Array.isArray(action));
+    alert(action + ',' + t);
     // this.ngplDialogService.lottie({
     //   lottiePath: `./assets/lottie/${lottie}.json`
     // });

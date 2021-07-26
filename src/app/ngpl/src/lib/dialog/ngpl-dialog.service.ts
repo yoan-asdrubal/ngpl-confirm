@@ -26,8 +26,8 @@ export class NgplDialogService {
       width: '480px',
       disableClose: true,
       data,
-      backdropClass: 'confirm-backdrop-class',
-      panelClass: 'confirm-panel-class'
+      backdropClass: 'ngpl-dialog-backdrop-class',
+      panelClass: 'ngpl-dialog-panel-class'
     });
     return dialogRef.afterClosed();
   }
@@ -43,8 +43,8 @@ export class NgplDialogService {
       width: '480px',
       disableClose: true,
       data,
-      backdropClass: 'confirm-backdrop-class',
-      panelClass: 'confirm-panel-class'
+      backdropClass: 'ngpl-dialog-backdrop-class',
+      panelClass: 'ngpl-dialog-panel-class'
     });
     return dialogRef.afterClosed();
   }
@@ -59,8 +59,8 @@ export class NgplDialogService {
       width: '480px',
       disableClose: false,
       data,
-      backdropClass: 'confirm-backdrop-class',
-      panelClass: 'confirm-panel-class'
+      backdropClass: 'ngpl-dialog-backdrop-class',
+      panelClass: 'ngpl-dialog-panel-class'
     });
     return dialogRef.afterClosed();
   }
@@ -73,8 +73,8 @@ export class NgplDialogService {
       width: '480px',
       disableClose: false,
       data,
-      backdropClass: 'confirm-backdrop-class',
-      panelClass: 'confirm-panel-class'
+      backdropClass: 'ngpl-dialog-backdrop-class',
+      panelClass: 'ngpl-dialog-panel-class'
     });
     return dialogRef.afterClosed();
   }
@@ -90,8 +90,8 @@ export class NgplDialogService {
       width: '480px',
       disableClose: false,
       data,
-      backdropClass: 'confirm-backdrop-class',
-      panelClass: 'confirm-panel-class'
+      backdropClass: 'ngpl-dialog-backdrop-class',
+      panelClass: 'ngpl-dialog-panel-class'
     });
     return dialogRef.afterClosed();
   }
@@ -106,8 +106,8 @@ export class NgplDialogService {
       width: '480px',
       disableClose: false,
       data,
-      backdropClass: 'confirm-backdrop-class',
-      panelClass: 'confirm-panel-class'
+      backdropClass: 'ngpl-dialog-backdrop-class',
+      panelClass: 'ngpl-dialog-panel-class'
     });
     return dialogRef.afterClosed();
   }

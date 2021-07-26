@@ -12,7 +12,7 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class NgplLottieComponent implements OnInit {
   options: AnimationOptions = {
-    path: '/assets/lottie/shapes.json'
+    path: '/assets/ngpl/dialog/lottie/shapes.json'
   };
 
   private animationItem: AnimationItem;

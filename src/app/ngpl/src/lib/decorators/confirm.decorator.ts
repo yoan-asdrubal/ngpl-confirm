@@ -20,13 +20,16 @@ export function Confirmable(
     // default values for our config, we’ll overwrite this with our options parameter
 
 
-    descriptor.value = function(args: any[]) {
+    descriptor.value = function(...args: any[]) {
+      // console.log('args', ...args);
       const service = NgplDialogModule?.injector.get<NgplDialogService>(NgplDialogService as Type<NgplDialogService>);
       if (!!service) {
         const dialogRef = service.confirm(options);
         return dialogRef.pipe(take(1)).subscribe((confirmed: boolean) => {
           if (!!confirmed) {
-            originalMethod.call(this, args);
+            // console.log('log descriptor', typeof args, Array.isArray(args), ...args);
+
+            originalMethod.call(this, ...args);
           }
         });
       }

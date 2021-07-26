@@ -2,8 +2,10 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngpl",
   "assets": [
-    "../../../src/app/ngpl/src/styles/*",
-    "../../../src/assets/*"
+    "./assets/**",
+    "./styles/*",
+    "../../src/app/ngpl/src/styles/*",
+    "../../src/assets/ngpl/**"
   ],
   "lib": {
     "entryFile": "../../src/app/ngpl/src/public-api.ts"

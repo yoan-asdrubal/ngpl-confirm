@@ -41,7 +41,6 @@ export class NgplAlertTestComponent implements OnInit {
   // }
   showSuccess(): void {
     this.notificationsService.show(createSuccessAlert('Alerta Succss'));
-
   }
 
   showLottie(lottie): void {
