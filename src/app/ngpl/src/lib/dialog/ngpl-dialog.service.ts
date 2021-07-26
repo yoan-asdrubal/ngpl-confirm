@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {Observable} from 'rxjs';
+import {EMPTY, Observable} from 'rxjs';
 import {NgplConfirmComponent} from './ngpl-confirm/ngpl-confirm.component';
 import {NgplDialogConfirmModel} from './ngpl-dialog-confirm.model';
 import {NgplInfoDialogComponent} from './ngpl-info-dialog/ngpl-info-dialog.component';

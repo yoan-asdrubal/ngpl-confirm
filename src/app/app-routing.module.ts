@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgplConfirmTestComponent} from './app-test/ngpl-confirm-test/ngpl-confirm-test.component';
 import {NgplLottieTestComponent} from './app-test/ngpl-lottie-test/ngpl-lottie-test.component';
 import {NgplAlertTestComponent} from './app-test/ngpl-alert-test/ngpl-alert-test.component';
+import {NgplDecoratorTestComponent} from './app-test/ngpl-decorator-test/ngpl-decorator-test.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   }, {
     path: 'ngpl-alert',
     component: NgplAlertTestComponent
+  }, {
+    path: 'ngpl-decorator',
+    component: NgplDecoratorTestComponent
   }, {
     path: '**',
     component: NgplConfirmTestComponent

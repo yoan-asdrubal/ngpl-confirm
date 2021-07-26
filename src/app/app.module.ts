@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {LOCALE_ID, NgModule} from '@angular/core';
+import {Injector, LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -30,6 +30,8 @@ import {NgplConfirmTestComponent} from './app-test/ngpl-confirm-test/ngpl-confir
 import {NgplLottieTestComponent} from './app-test/ngpl-lottie-test/ngpl-lottie-test.component';
 import {NgplAlertTestComponent} from './app-test/ngpl-alert-test/ngpl-alert-test.component';
 import {NgplNotificationsModule} from './ngpl/src/lib/notification';
+import {NgplDecoratorTestComponent} from './app-test/ngpl-decorator-test/ngpl-decorator-test.component';
+import {NgplDialogService} from './ngpl/src/lib/dialog';
 
 registerLocaleData(localeEs);
 
@@ -65,7 +67,8 @@ const ngplCommonModules = [
     NgplConfirmTestComponent,
     SideNavComponent,
     NgplLottieTestComponent,
-    NgplAlertTestComponent
+    NgplAlertTestComponent,
+    NgplDecoratorTestComponent
   ],
   imports: [
     BrowserModule,
@@ -85,4 +88,6 @@ const ngplCommonModules = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor(private ngplDialog: NgplDialogService) {
+  }
 }

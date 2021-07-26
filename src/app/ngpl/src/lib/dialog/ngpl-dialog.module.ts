@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {Injector, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NgplConfirmComponent} from './ngpl-confirm/ngpl-confirm.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -8,6 +8,8 @@ import {NgplInfoDialogComponent} from './ngpl-info-dialog/ngpl-info-dialog.compo
 import {LottieCacheModule, LottieModule} from 'ngx-lottie';
 import player from 'lottie-web';
 import {NgplLottieComponent} from './ngpl-lottie/ngpl-lottie.component';
+import {NgplDialogService} from './ngpl-dialog.service';
+
 
 export function playerFactoryDialog(): any {
   return player;
@@ -26,5 +28,10 @@ export function playerFactoryDialog(): any {
   ]
 })
 export class NgplDialogModule {
+  static injector: Injector = null;
 
+  constructor(private ngplDialog: NgplDialogService, injector: Injector) {
+    NgplDialogModule.injector = injector;
+    console.log('NgplDialogModule', ngplDialog);
+  }
 }

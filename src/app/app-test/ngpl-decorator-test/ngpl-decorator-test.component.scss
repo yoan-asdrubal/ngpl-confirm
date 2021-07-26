@@ -1,0 +1,18 @@
+div {
+  span {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  div {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+
+    button {
+      min-width: 110px;
+      margin: 10px 20px;
+    }
+  }
+
+}
