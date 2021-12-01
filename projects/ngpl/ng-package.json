@@ -3,9 +3,7 @@
   "dest": "../../dist/ngpl",
   "assets": [
     "./assets/**",
-    "./styles/*",
-    "../../src/app/ngpl/src/styles/*",
-    "../../src/assets/ngpl/**"
+    "./styles/*"
   ],
   "lib": {
     "entryFile": "../../src/app/ngpl/src/public-api.ts"
